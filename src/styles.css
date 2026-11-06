@@ -1,3 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
 
-@import 'tailwindcss';
+@import "tailwindcss";
+@theme {
+  /* Backgrounds */
+  --color-app-bg: #F3F6F5;
+  --color-surface: #FFFFFF;
+  --color-sidebar: #172522;
+  --color-sidebar-hover: #253833;
+
+  /* Primary brand — emerald */
+  --color-brand: #16836B;
+  --color-brand-hover: #116A56;
+  --color-brand-soft: #E1F3EC;
+
+  /* Text */
+  --color-ink: #202B29;
+  --color-muted: #778580;
+  --color-line: #E2EAE6;
+
+  /* Incident statuses */
+  --color-critical: #D64545;
+  --color-warning: #D99726;
+  --color-success: #27845B;
+
+  /* Typography */
+  --font-sans: "Inter", sans-serif;
+}

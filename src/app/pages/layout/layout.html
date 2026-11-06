@@ -1,0 +1,19 @@
+
+<div class="flex h-screen overflow-hidden bg-app-bg">
+
+  <!-- Sidebar -->
+  <app-sidebar [incidentUserData]="incidentUserData()" [isSidebarOpen]="isSideBarOpen()" (closeSidebar)="toggleSidebar()" ></app-sidebar>
+
+  <!-- Main application area -->
+  <div class="flex min-w-0 flex-1 flex-col overflow-hidden">
+
+    <!-- Navbar -->
+    <app-navbar [incidentUserData]="incidentUserData()" (menuClick)="toggleSidebar()" ></app-navbar>
+
+    <!-- Routed pages -->
+    <main class="min-h-0 flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8">
+      <router-outlet></router-outlet>
+    </main>
+
+  </div>
+</div>

@@ -1,0 +1,193 @@
+
+<div class="overflow-hidden rounded-2xl border border-line bg-surface shadow-sm">
+
+  <!-- Header -->
+  <div class="border-b border-line px-6 py-5">
+    <div class="flex items-center gap-3">
+      <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-soft text-brand">
+        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="8" r="4"/>
+          <path d="M3 21v-2a6 6 0 0 1 12 0v2"/>
+          <path d="M19 8v6M22 11h-6"/>
+        </svg>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-semibold text-ink">Create User</h2>
+        <p class="mt-1 text-sm text-muted">Enter the user's information below.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Form -->
+  <form class="p-6" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+
+    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
+
+      <!-- Full Name -->
+      <div>
+        <label for="fullName" class="mb-2 block text-sm font-medium text-ink">
+          Full Name
+        </label>
+        <input
+          id="fullName"
+          name="fullName"
+          formControlName="fullName"
+          type="text"
+          placeholder="e.g. Waleed Mehrez"
+          class="h-11 w-full rounded-xl border border-line bg-app-bg/50 px-4 text-sm text-ink outline-none transition placeholder:text-muted/70 focus:border-brand focus:bg-white focus:ring-4 focus:ring-brand/10"
+        />
+        @if(userForm.invalid&&(fullName?.touched || fullName?.dirty)){
+          @if(fullName.hasError('required')){
+            <p class="mt-2 text-xs text-critical">Full name is required.</p>
+          }
+          @if(fullName.hasError('minlength')){
+            <p class="mt-2 text-xs text-critical">Full name must be at least 6 characters.</p>
+          }
+          @if(fullName.hasError('maxlength')){
+            <p class="mt-2 text-xs text-critical">Full name must be at most 20 characters.</p>
+          }
+        }
+      </div>
+
+      <!-- Username -->
+      <div>
+        <label for="userName" class="mb-2 block text-sm font-medium text-ink">
+          Username
+        </label>
+        <input
+          id="userName"
+          name="userName"
+          formControlName="userName"
+          type="text"
+          placeholder="e.g. waleedMehrez123"
+          class="h-11 w-full rounded-xl border border-line bg-app-bg/50 px-4 text-sm text-ink outline-none transition placeholder:text-muted/70 focus:border-brand focus:bg-white focus:ring-4 focus:ring-brand/10"
+        />
+        @if(userForm.invalid&&(userName?.touched || userName?.dirty)){
+          @if(userName.hasError('required')){
+            <p class="mt-2 text-xs text-critical">Username is required.</p>
+          }
+          @if(userName.hasError('minlength')){
+            <p class="mt-2 text-xs text-critical">Username must be at least 6 characters.</p>
+          }
+          @if(userName.hasError('maxlength')){
+            <p class="mt-2 text-xs text-critical">Username must be at most 20 characters.</p>
+          }
+          @if(userName.hasError('pattern')){
+            <p class="mt-2 text-xs text-critical">Username must contain only letters, numbers, and underscores.</p>
+          }
+        }
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label for="emailId" class="mb-2 block text-sm font-medium text-ink">
+          Email Address
+        </label>
+        <input
+          id="emailId"
+          name="emailId"
+          formControlName="emailId"
+          type="email"
+          placeholder="name@example.com"
+          class="h-11 w-full rounded-xl border border-line bg-app-bg/50 px-4 text-sm text-ink outline-none transition placeholder:text-muted/70 focus:border-brand focus:bg-white focus:ring-4 focus:ring-brand/10"
+        />
+        @if(userForm.invalid&&(emailId?.touched || emailId?.dirty)){
+          @if(emailId.hasError('required')){
+            <p class="mt-2 text-xs text-critical">Email address is required.</p>
+          }
+          @if(emailId.hasError('email')){
+            <p class="mt-2 text-xs text-critical">Please enter a valid email address.</p>
+          }
+        }
+      </div>
+      <!-- Password -->
+      <div>
+        <label for="password" class="mb-2 block text-sm font-medium text-ink">
+          Password
+        </label>
+        <input
+          id="password"
+          name="password"
+          formControlName="password"
+          type="password"
+          placeholder="••••••••"
+          class="h-11 w-full rounded-xl border border-line bg-app-bg/50 px-4 text-sm text-ink outline-none transition placeholder:text-muted/70 focus:border-brand focus:bg-white focus:ring-4 focus:ring-brand/10"
+        />
+        @if(userForm.invalid&&(password?.touched || password?.dirty)){
+          @if(password.hasError('required')){
+            <p class="mt-2 text-xs text-critical">Password is required.</p>
+          }
+          @if(password.hasError('minlength')){
+            <p class="mt-2 text-xs text-critical">Password must be at least 6 characters.</p>
+          }
+          @if(password.hasError('maxlength')){
+            <p class="mt-2 text-xs text-critical">Password must be at most 20 characters.</p>
+          }
+          @if(password.hasError('pattern')){
+            <p class="mt-2 text-xs text-critical">Password must contain at least one uppercase letter, one lowercase letter, and one number.</p>
+          }
+        }
+      </div>
+      
+
+      <!-- Role -->
+      <div>
+        <label for="role" class="mb-2 block text-sm font-medium text-ink">
+          Role
+        </label>
+        <div class="relative">
+          <select
+            id="role"
+            name="role"
+            formControlName="role"
+            class="h-11 w-full appearance-none rounded-xl border border-line bg-app-bg/50 px-4 pr-10 text-sm text-ink outline-none transition focus:border-brand focus:bg-white focus:ring-4 focus:ring-brand/10"
+          >
+            <option value="" disabled selected>Select a role</option>
+            <option value="User">User</option>
+            <option value="Support Staff">Support Staff</option>
+          </select>
+
+          <svg class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-muted"
+            xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m7 10 5 5 5-5"/>
+          </svg>
+        </div>
+        @if(userForm.invalid&&(role?.touched || role?.dirty)){
+          @if(role.hasError('required')){
+            <p class="mt-2 text-xs text-critical">Role is required.</p>
+          }
+        }
+      </div>
+
+    </div>
+
+    <!-- Actions -->
+    <div class="mt-6 flex flex-col-reverse gap-3 border-t border-line pt-5 sm:flex-row sm:justify-end">
+      <button
+        type="button"
+        (click)="onCancel()"
+        class="h-11 rounded-xl border border-line bg-white px-5 text-sm font-medium text-ink transition hover:bg-app-bg"
+      >
+        Cancel
+      </button>
+
+      <button
+        type="submit"
+        class="flex h-11 items-center justify-center gap-2 rounded-xl bg-brand px-6 text-sm font-semibold text-white transition hover:bg-brand-hover focus:outline-none focus:ring-4 focus:ring-brand/20"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 5v14M5 12h14"/>
+        </svg>
+        Create User
+      </button>
+    </div>
+
+  </form>
+</div>

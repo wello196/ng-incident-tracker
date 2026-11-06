@@ -1,0 +1,35 @@
+
+
+<div class="mx-auto max-w-[1600px] space-y-6">
+
+  <!-- Page heading -->
+  <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+    <div>
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
+        Workspace Administration
+      </p>
+      <h1 class="mt-2 text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
+        User Management
+      </h1>
+      <p class="mt-2 text-sm text-muted">
+        Manage users, account access, and workspace permissions.
+      </p>
+    </div>
+  </div>
+  <div class="form-view">
+
+  <!-- User form -->
+  <app-user-form (payload)="createUser($event)"></app-user-form>
+  @if(errMessage()){
+     <p class="mt-2 text-2xl text-critical">{{errMessage()}}</p>
+  }
+ 
+
+
+  <!-- User list -->
+  <app-users-list [userData]="usersData()" [totalUsers]="totalUsers()" (selectedUserId)="deleteUser($event)"></app-users-list>
+  </div>
+
+</div>
+
+

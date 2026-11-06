@@ -1,0 +1,560 @@
+
+<div class="flex min-h-screen bg-app-bg">
+
+  <!-- Left branding panel -->
+  <section
+    class="relative hidden w-[46%] flex-col justify-between overflow-hidden bg-sidebar p-10 text-white lg:flex xl:p-14"
+  >
+    <!-- Decorative background elements -->
+    <div class="pointer-events-none absolute -right-32 top-32 h-96 w-96 rounded-full border border-white/6"></div>
+    <div class="pointer-events-none absolute -right-20 top-44 h-72 w-72 rounded-full border border-white/6"></div>
+    <div class="pointer-events-none absolute -bottom-40 -left-20 h-96 w-96 rounded-full bg-brand/10 blur-3xl"></div>
+
+    <!-- Brand -->
+    <div class="relative z-10 flex items-center gap-3">
+      <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-brand text-white shadow-lg shadow-black/20">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/>
+          <path d="m9 12 2 2 4-4"/>
+        </svg>
+      </div>
+
+      <div>
+        <h1 class="text-xl font-semibold tracking-tight">Resolve</h1>
+        <p class="mt-0.5 text-[9px] font-semibold tracking-[0.22em] text-white/45">
+          INCIDENT CONTROL
+        </p>
+      </div>
+    </div>
+
+    <!-- Main message -->
+    <div class="relative z-10 my-12 max-w-lg">
+      <div class="mb-7 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/4 px-3 py-2">
+        <span class="h-2 w-2 rounded-full bg-brand"></span>
+        <span class="text-xs font-medium tracking-wide text-white/70">
+          INCIDENT MANAGEMENT PLATFORM
+        </span>
+      </div>
+
+      <h2 class="text-4xl font-semibold leading-[1.2] tracking-tight xl:text-5xl">
+        Every incident
+        <br />
+        deserves a
+        <span class="text-brand">resolution.</span>
+      </h2>
+
+      <p class="mt-6 max-w-md text-sm leading-7 text-white/55 xl:text-base">
+        Stay informed, coordinate your team, and turn unexpected
+        issues into resolved outcomes — all from one workspace.
+      </p>
+
+      <!-- Decorative incident activity card -->
+      <div class="mt-12 max-w-sm rounded-2xl border border-white/10 bg-white/4 p-5 backdrop-blur-sm">
+        <div class="flex items-center justify-between">
+          
+          <span class="flex items-center gap-1.5 text-[10px] text-[#9AC5A5]">
+            <span class="h-1.5 w-1.5 rounded-full bg-[#78AC87]"></span>
+            MONITORING
+          </span>
+        </div>
+
+        <div class="mt-5 flex items-end justify-between gap-3">
+          <div>
+         
+            <p class="mt-1 text-2xl text-white/45">Incidents tracked</p>
+          </div>
+
+          <div class="flex items-end gap-1.5">
+            <div class="h-5 w-3 rounded-sm bg-brand/40"></div>
+            <div class="h-8 w-3 rounded-sm bg-brand/55"></div>
+            <div class="h-6 w-3 rounded-sm bg-brand/45"></div>
+            <div class="h-11 w-3 rounded-sm bg-brand/80"></div>
+            <div class="h-8 w-3 rounded-sm bg-brand/60"></div>
+            <div class="h-14 w-3 rounded-sm bg-brand"></div>
+            <div class="h-10 w-3 rounded-sm bg-brand/65"></div>
+          </div>
+        </div>
+
+        <div class="mt-5 h-px bg-white/10"></div>
+
+        <div class="mt-4 flex items-center gap-2 text-xs text-white/55">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#9AC5A5"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="m5 12 4 4L19 6"/>
+          </svg>
+          One workspace. Clear accountability.
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="relative z-10 flex items-center justify-between gap-4 text-[11px] text-white/35">
+      <span>© 2026 Resolve</span>
+      <span>Built for better incident response</span>
+    </div>
+  </section>
+
+  <!-- Right login section -->
+  <section class="flex min-h-screen w-full items-center justify-center px-5 py-10 sm:px-10 lg:w-[54%] lg:px-12 xl:px-20">
+
+    <div class="w-full max-w-105">
+
+      <!-- Mobile brand -->
+      <div class="mb-12 flex items-center gap-3 lg:hidden">
+        <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand text-white">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/>
+            <path d="m9 12 2 2 4-4"/>
+          </svg>
+        </div>
+
+        <div>
+          <h1 class="text-lg font-semibold tracking-tight text-ink">Resolve</h1>
+          <p class="text-[9px] font-semibold tracking-[0.2em] text-muted">
+            INCIDENT CONTROL
+          </p>
+        </div>
+      </div>
+
+      <!-- Heading -->
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
+          Welcome back
+        </p>
+
+        <h2 class="mt-3 text-3xl font-semibold tracking-tight text-ink sm:text-[34px]">
+          Sign in to your account
+        </h2>
+
+        <p class="mt-3 text-sm leading-6 text-muted">
+          Enter your credentials to access your incident management workspace.
+        </p>
+      </div>
+
+      <!-- Login form -->
+      <form class="mt-9 space-y-5" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+
+        <!-- Email -->
+        <div>
+          <label for="email" class="mb-2 block text-sm font-medium text-ink">
+            UserName
+          </label>
+
+          <div class="group flex h-12 items-center gap-3 rounded-xl border border-line bg-white px-4 transition focus-within:border-brand focus-within:ring-4 focus-within:ring-brand/10">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="shrink-0 text-muted transition group-focus-within:text-brand"
+            >
+              <rect x="3" y="5" width="18" height="14" rx="2"/>
+              <path d="m3 7 9 6 9-6"/>
+            </svg>
+
+            <input
+              id="userName"
+              name="userName"
+              type="email"
+              formControlName="userName"
+              autocomplete="email"
+              placeholder="Enter your Username"
+              class="h-full min-w-0 flex-1 bg-transparent text-sm text-ink outline-none placeholder:text-[#B4B2AA]"
+            />
+          </div>
+          @if(loginForm.invalid&&(userName?.touched||userName?.dirty)){
+              @if(userName?.hasError('required')){
+                <p class="text-xs text-red-500" style="margin-top: 10px;">username is required</p>
+              }
+          }
+        </div>
+
+        <!-- Password -->
+        <div>
+          <div class="mb-2 flex items-center justify-between gap-3">
+            <label for="password" class="block text-sm font-medium text-ink">
+              Password
+            </label>
+          </div>
+
+          <div class="group flex h-12 items-center gap-3 rounded-xl border border-line bg-white px-4 transition focus-within:border-brand focus-within:ring-4 focus-within:ring-brand/10">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="shrink-0 text-muted transition group-focus-within:text-brand"
+            >
+              <rect x="3" y="11" width="18" height="11" rx="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+
+            <input
+              id="password"
+              name="password"
+              type="password"
+              formControlName="password"
+              autocomplete="current-password"
+              placeholder="Enter your password"
+              class="h-full min-w-0 flex-1 bg-transparent text-sm text-ink outline-none placeholder:text-[#B4B2AA]"
+            />
+
+           
+          </div>
+          @if(loginForm.invalid&&(password?.touched||password?.dirty)){
+              @if(password?.hasError('required')){
+                <p class="text-xs text-red-500" style="margin-top: 10px;">Password is required</p>
+              }
+          }
+        </div>
+
+        
+
+        <!-- Submit -->
+        <button
+          type="submit"
+          class="group flex h-12.5 w-full items-center justify-center gap-2 rounded-xl bg-brand px-5 text-sm font-semibold text-white shadow-lg shadow-brand/15 transition hover:-translate-y-0.5 hover:bg-brand-hover hover:shadow-brand/25 active:translate-y-0"
+        >
+          Sign in
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="17"
+            height="17"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="transition-transform group-hover:translate-x-0.5"
+          >
+            <path d="M5 12h14"/>
+            <path d="m12 5 7 7-7 7"/>
+          </svg>
+        </button>
+        @if(errMessage()){
+          <p class="text-xs text-red-500">{{errMessage()}}</p>
+        }
+
+      </form>
+      @if(isLoading()){
+        <app-loading-spinner></app-loading-spinner>
+      }
+      
+
+      <!-- Security note -->
+      <div class="mt-8 flex items-start gap-3 rounded-xl border border-line bg-white/60 p-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#4F8061"
+          stroke-width="1.7"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="mt-0.5 shrink-0"
+        >
+          <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/>
+          <path d="m9 12 2 2 4-4"/>
+        </svg>
+
+        <p class="text-xs leading-5 text-muted">
+          Your workspace is protected. Only authorized team members can access incident records.
+        </p>
+      </div>
+
+      <p class="mt-8 text-center text-xs text-muted">
+        © 2026 Resolve. All rights reserved.
+      </p>
+
+<!-- Demo Accounts -->
+<section class="mt-8 border-t border-line pt-5">
+  <!-- Header -->
+  <div class="mb-4 flex items-center justify-between gap-3">
+    <div>
+      <h3 class="text-sm font-semibold text-ink">
+        Explore Demo Accounts
+      </h3>
+      <p class="mt-1 text-xs text-muted">
+        Try the system with different access levels.
+      </p>
+    </div>
+
+    <span
+      class="shrink-0 rounded-full bg-brand-soft px-2.5 py-1 text-xs font-medium text-brand"
+    >
+      3 accounts
+    </span>
+  </div>
+
+  <!-- Admin Account -->
+  <details class="group mb-2 overflow-hidden rounded-xl border border-line bg-surface">
+    <summary
+      class="flex cursor-pointer list-none items-center justify-between gap-3 px-4 py-3 transition hover:bg-app-bg"
+    >
+      <div class="flex min-w-0 items-center gap-3">
+        <div
+          class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-soft text-brand"
+        >
+          <svg
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 3 4.5 6v5.5c0 4.5 3.2 7.7 7.5 9.5 4.3-1.8 7.5-5 7.5-9.5V6L12 3Z"
+            />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m9 12 2 2 4-4"
+            />
+          </svg>
+        </div>
+
+        <div class="min-w-0">
+          <p class="text-sm font-semibold text-ink">Administrator</p>
+          <p class="text-xs text-muted">Full system access</p>
+        </div>
+      </div>
+
+      <svg
+        class="h-4 w-4 shrink-0 text-muted transition-transform group-open:rotate-180"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="1.8"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6" />
+      </svg>
+    </summary>
+
+    <div class="border-t border-line px-4 py-3">
+      <p class="mb-3 text-xs leading-5 text-muted">
+        Manage users, view all incidents, create and delete incidents,
+        access the incident form, and view the dashboard.
+      </p>
+
+      <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
+        <div class="rounded-lg bg-app-bg px-3 py-2">
+          <p class="text-[11px] font-medium text-muted">Username</p>
+          <p class="mt-1 break-all font-mono text-xs font-semibold text-ink">
+            incidentAdmin
+          </p>
+        </div>
+
+        <div class="rounded-lg bg-app-bg px-3 py-2">
+          <p class="text-[11px] font-medium text-muted">Password</p>
+          <p class="mt-1 font-mono text-xs font-semibold text-ink">
+            Admin
+          </p>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <!-- Creator Account -->
+  <details class="group mb-2 overflow-hidden rounded-xl border border-line bg-surface">
+    <summary
+      class="flex cursor-pointer list-none items-center justify-between gap-3 px-4 py-3 transition hover:bg-app-bg"
+    >
+      <div class="flex min-w-0 items-center gap-3">
+        <div
+          class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-amber-50 text-amber-600"
+        >
+          <svg
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"
+            />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 20a8 8 0 0 1 16 0"
+            />
+          </svg>
+        </div>
+
+        <div class="min-w-0">
+          <p class="text-sm font-semibold text-ink">Creator</p>
+          <p class="text-xs text-muted">Your own incidents</p>
+        </div>
+      </div>
+
+      <svg
+        class="h-4 w-4 shrink-0 text-muted transition-transform group-open:rotate-180"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="1.8"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6" />
+      </svg>
+    </summary>
+
+    <div class="border-t border-line px-4 py-3">
+      <p class="mb-3 text-xs leading-5 text-muted">
+        View, modify, and delete incidents created by you.
+        No access to the dashboard or user management.
+      </p>
+
+      <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
+        <div class="rounded-lg bg-app-bg px-3 py-2">
+          <p class="text-[11px] font-medium text-muted">Username</p>
+          <p class="mt-1 break-all font-mono text-xs font-semibold text-ink">
+            waleedMehrez123
+          </p>
+        </div>
+
+        <div class="rounded-lg bg-app-bg px-3 py-2">
+          <p class="text-[11px] font-medium text-muted">Password</p>
+          <p class="mt-1 font-mono text-xs font-semibold text-ink">
+            Waleed123@
+          </p>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <!-- Support Staff Account -->
+  <details class="group overflow-hidden rounded-xl border border-line bg-surface">
+    <summary
+      class="flex cursor-pointer list-none items-center justify-between gap-3 px-4 py-3 transition hover:bg-app-bg"
+    >
+      <div class="flex min-w-0 items-center gap-3">
+        <div
+          class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-sky-50 text-sky-600"
+        >
+          <svg
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"
+            />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 20a8 8 0 0 1 16 0"
+            />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19 8v4m-2-2h4"
+            />
+          </svg>
+        </div>
+
+        <div class="min-w-0">
+          <p class="text-sm font-semibold text-ink">Support Staff</p>
+          <p class="text-xs text-muted">Assigned incidents only</p>
+        </div>
+      </div>
+
+      <svg
+        class="h-4 w-4 shrink-0 text-muted transition-transform group-open:rotate-180"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="1.8"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6" />
+      </svg>
+    </summary>
+
+    <div class="border-t border-line px-4 py-3">
+      <p class="mb-3 text-xs leading-5 text-muted">
+        View and modify incidents assigned to you.
+        You cannot delete incidents and have no access to the dashboard
+        or user management.
+      </p>
+
+      <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
+        <div class="rounded-lg bg-app-bg px-3 py-2">
+          <p class="text-[11px] font-medium text-muted">Username</p>
+          <p class="mt-1 break-all font-mono text-xs font-semibold text-ink">
+            waleedSupport123
+          </p>
+        </div>
+
+        <div class="rounded-lg bg-app-bg px-3 py-2">
+          <p class="text-[11px] font-medium text-muted">Password</p>
+          <p class="mt-1 font-mono text-xs font-semibold text-ink">
+            Waleed123@
+          </p>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <!-- Footer Note -->
+  <p class="mt-3 text-center text-[11px] leading-5 text-muted">
+    Demo accounts are provided for testing purposes.
+  </p>
+</section>
+
+
+    </div>
+    
+  </section>
+  
+</div>
+
+

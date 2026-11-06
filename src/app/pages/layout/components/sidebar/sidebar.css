@@ -1,0 +1,69 @@
+
+/* Default navigation link */
+.sidebar-link {
+  position: relative;
+  color: rgb(255 255 255 / 65%);
+  border: 1px solid transparent;
+}
+
+/* Hover state */
+.sidebar-link:hover:not(.active) {
+  background-color: var(--color-sidebar-hover);
+  color: white;
+}
+
+/* Active route */
+.sidebar-link.active {
+  color: white;
+  background-color: rgba(10, 82, 33, 0.2);
+  border-color: rgba(10, 82, 33, 0.2);
+}
+
+/* Active link icon */
+.sidebar-link.active svg {
+  color: var(--color-brand);
+}
+
+/* Active link indicator */
+.sidebar-link.active::after {
+  content: "";
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  width: 4px;
+  height: 20px;
+  border-radius: 9999px;
+  background-color: var(--color-brand);
+  transform: translateY(-50%);
+}
+
+/* Counter badge */
+.sidebar-count {
+  background-color: rgb(255 255 255 / 10%);
+  color: rgb(255 255 255 / 70%);
+}
+
+
+
+/* Mobile drawer states */
+.sidebar-closed {
+  transform: translateX(-100%);
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.sidebar-open {
+  transform: translateX(0);
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Desktop: sidebar stays visible */
+@media (min-width: 768px) {
+  .sidebar-closed,
+  .sidebar-open {
+    transform: translateX(0);
+    visibility: visible;
+    pointer-events: auto;
+  }
+}

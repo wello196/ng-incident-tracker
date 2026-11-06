@@ -1,0 +1,106 @@
+<!-- @if (isStatusModalOpen()) { -->
+  <!-- Backdrop -->
+  <div
+    class="fixed inset-0 z-50 flex items-center justify-center bg-black/45 p-4 backdrop-blur-sm"
+    /* (click)="closeStatusModal()" */
+  >
+    <!-- Modal -->
+    <div
+      class="w-full max-w-md rounded-2xl border border-line bg-surface p-6 shadow-2xl"
+      (click)="$event.stopPropagation()"
+    >
+      <!-- Header -->
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <h3 class="text-lg font-semibold text-ink">
+            Change Incident Status
+          </h3>
+          <p class="mt-1 text-sm text-muted">
+            Update the status of incident
+            <span class="font-semibold text-brand">
+              #INC-{{ incidentId() }}
+            </span>
+          </p>
+        </div>
+
+        <button
+          type="button"
+          (click)="closeModal.emit()"
+          aria-label="Close modal"
+          class="rounded-lg p-2 text-muted transition hover:bg-app-bg hover:text-ink"
+        >
+          <svg
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m18 6-12 12M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Current Status -->
+      <div class="mt-6 rounded-xl bg-app-bg p-4">
+        <p class="text-xs font-medium uppercase tracking-wider text-muted">
+          Current Status
+        </p>
+
+        <span
+          class="mt-2 inline-flex rounded-full border px-3 py-1 text-sm font-medium"
+          [ngClass]="statusStyles[incidentStatus() ?? ''] || 'border-slate-200 bg-slate-100 text-slate-700'"
+        >
+          {{ incidentStatus() }}
+        </span>
+      </div>
+
+      <!-- Status Selection -->
+      <div class="mt-5">
+        <label
+          for="newIncidentStatus"
+          class="mb-2 block text-sm font-medium text-ink"
+        >
+          New Status
+        </label>
+
+        <select
+          id="newIncidentStatus"
+          name="status"
+          [(ngModel)]="chooseStatus"
+          class="w-full rounded-xl border border-line bg-surface px-4 py-3 text-sm text-ink outline-none transition focus:border-brand focus:ring-4 focus:ring-brand/10"
+        >
+          <option value="" disabled>Select a status</option>
+          <option value="Open">Open</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Resolved">Resolved</option>
+          <option value="Closed">Closed</option>
+        </select>
+      </div>
+
+      <!-- Actions -->
+      <div class="mt-7 flex justify-end gap-3">
+        <button
+          type="button"
+          (click)="closeModal.emit()"
+          /* (click)="closeStatusModal()" */
+          class="rounded-xl border border-line px-4 py-2.5 text-sm font-semibold text-ink transition hover:bg-app-bg"
+        >
+          Cancel
+        </button>
+
+        <button
+          (click)="changeStatus()"
+          type="button"
+          class="rounded-xl bg-brand px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-hover"
+        >
+          Save Status
+        </button>
+      </div>
+    </div>
+  </div>
+<!-- } -->

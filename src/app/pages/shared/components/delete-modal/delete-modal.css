@@ -1,0 +1,147 @@
+:host {
+  display: block;
+  font-family: var(--font-sans, "Inter", sans-serif);
+}
+
+/* Backdrop Overlay */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: rgba(23, 37, 34, 0.45); /* Uses sidebar dark tint with opacity */
+  backdrop-filter: blur(2px);
+}
+
+/* Modal Card Container */
+.modal-card {
+  width: 100%;
+  max-width: 28rem; /* ~448px */
+  background-color: var(--color-surface, #FFFFFF);
+  border: 1px solid var(--color-line, #E2EAE6);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 20px 25px -5px rgba(32, 43, 41, 0.08), 0 8px 10px -6px rgba(32, 43, 41, 0.04);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header & Icon */
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.icon-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  background-color: #FDF2F2; /* Soft critical tint */
+  color: var(--color-critical, #D64545);
+  border: 1px solid rgba(214, 69, 69, 0.15);
+}
+
+.btn-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.375rem;
+  color: var(--color-muted, #778580);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-close:hover {
+  background-color: var(--color-app-bg, #F3F6F5);
+  color: var(--color-ink, #202B29);
+}
+
+/* Body Content */
+.modal-body {
+  margin-bottom: 1.5rem;
+}
+
+.modal-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-ink, #202B29);
+  margin: 0 0 0.5rem 0;
+  line-height: 1.35;
+}
+
+.modal-description {
+  font-size: 0.875rem;
+  color: var(--color-muted, #778580);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.item-name {
+  color: var(--color-ink, #202B29);
+  font-weight: 600;
+}
+
+/* Footer Buttons */
+.modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.btn-cancel,
+.btn-delete {
+  font-family: var(--font-sans, "Inter", sans-serif);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.625rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-cancel {
+  background-color: var(--color-surface, #FFFFFF);
+  color: var(--color-ink, #202B29);
+  border: 1px solid var(--color-line, #E2EAE6);
+}
+
+.btn-cancel:hover {
+  background-color: var(--color-app-bg, #F3F6F5);
+}
+
+.btn-delete {
+  background-color: var(--color-critical, #D64545);
+  color: #FFFFFF;
+  border: 1px solid transparent;
+}
+
+.btn-delete:hover {
+  background-color: #C03737;
+}
+
+@media (max-width: 480px) {
+  .modal-footer {
+    flex-direction: column-reverse;
+  }
+
+  .btn-cancel,
+  .btn-delete {
+    width: 100%;
+  }
+}
